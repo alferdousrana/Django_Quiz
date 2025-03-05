@@ -243,34 +243,47 @@
             q20: 'b'
         };
 
-        function submitQuiz() {
-            const form = document.getElementById('quizForm');
-            const resultDiv = document.getElementById('result');
-            let correct = 0;
-            let incorrect = 0;
-            let feedback = '';
+        let startTime = Date.now();
+            let attemptHistory = [];
 
-            for (const [key, value] of Object.entries(correctAnswers)) {
-                const selected = form.querySelector(`input[name="${key}"]:checked`);
-                if (selected) {
-                    if (selected.value === value) {
-                        correct++;
+            function submitQuiz() {
+                const form = document.getElementById('quizForm');
+                const resultDiv = document.getElementById('result');
+                let correct = 0;
+                let incorrect = 0;
+                let feedback = '';
+
+                const currentTime = Date.now();
+                const timeTaken = ((currentTime - startTime) / 1000).toFixed(2); // Convert to seconds
+                attemptHistory.push(timeTaken);
+                startTime = Date.now(); // Reset for next attempt
+
+                for (const [key, value] of Object.entries(correctAnswers)) {
+                    const selected = form.querySelector(`input[name="${key}"]:checked`);
+                    if (selected) {
+                        if (selected.value === value) {
+                            correct++;
+                        } else {
+                            incorrect++;
+                            feedback += `<p>Question ${key.slice(1)}: Correct answer is ${value.toUpperCase()}</p>`;
+                        }
                     } else {
                         incorrect++;
-                        feedback += `<p>Question ${key.slice(1)}: Correct answer is ${value.toUpperCase()}</p>`;
+                        feedback += `<p>Question ${key.slice(1)}: You did not answer. Correct answer is ${value.toUpperCase()}</p>`;
                     }
-                } else {
-                    incorrect++;
-                    feedback += `<p>Question ${key.slice(1)}: You did not answer. Correct answer is ${value.toUpperCase()}</p>`;
                 }
-            }
 
-            resultDiv.style.display = 'block';
-            resultDiv.innerHTML = `<h3>Results:</h3>
+                let attemptHistoryText = attemptHistory.map((t, i) => `<p>Attempt ${i + 1}: ${t} seconds</p>`).join('');
+
+                resultDiv.style.display = 'block';
+                resultDiv.innerHTML = `<h3>Results:</h3>
                 <p>Correct: ${correct}</p>
                 <p>Incorrect: ${incorrect}</p>
-                ${feedback}`;
-        }
+                ${feedback}
+                <h3>Attempt History:</h3>
+                ${attemptHistoryText}`;
+            }
+
     </script>
 </body>
 </html>
