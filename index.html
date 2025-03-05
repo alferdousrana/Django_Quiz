@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django MCQ Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h3 {
+            margin-bottom: 10px;
+        }
+        .options {
+            margin-left: 20px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e0f7fa;
+            border: 1px solid #00acc1;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Django MCQ Quiz</h1>
+    <form id="quizForm">
+        <div class="question">
+            <h3>1. What is Django?</h3>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a"> A Python framework</label>
+                <label><input type="radio" name="q1" value="b"> A JavaScript library</label>
+                <label><input type="radio" name="q1" value="c"> A database</label>
+                <label><input type="radio" name="q1" value="d"> A web server</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>2. Which command is used to start a new Django project?</h3>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> django-admin startproject</label>
+                <label><input type="radio" name="q2" value="b"> django-admin createproject</label>
+                <label><input type="radio" name="q2" value="c"> python manage.py startproject</label>
+                <label><input type="radio" name="q2" value="d"> django startproject</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>3. What file is used to define URL patterns in Django?</h3>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a"> urls.py</label>
+                <label><input type="radio" name="q3" value="b"> views.py</label>
+                <label><input type="radio" name="q3" value="c"> settings.py</label>
+                <label><input type="radio" name="q3" value="d"> models.py</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>4. Which of the following is not a valid Django field type?</h3>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a"> CharField</label>
+                <label><input type="radio" name="q4" value="b"> IntegerField</label>
+                <label><input type="radio" name="q4" value="c"> TextField</label>
+                <label><input type="radio" name="q4" value="d"> BooleanTextField</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>5. What is the default database used by Django?</h3>
+            <div class="options">
+                <label><input type="radio" name="q5" value="a"> MySQL</label>
+                <label><input type="radio" name="q5" value="b"> PostgreSQL</label>
+                <label><input type="radio" name="q5" value="c"> SQLite</label>
+                <label><input type="radio" name="q5" value="d"> Oracle</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>6. Which file contains settings for a Django project?</h3>
+            <div class="options">
+                <label><input type="radio" name="q6" value="a"> settings.py</label>
+                <label><input type="radio" name="q6" value="b"> urls.py</label>
+                <label><input type="radio" name="q6" value="c"> models.py</label>
+                <label><input type="radio" name="q6" value="d"> views.py</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>7. How do you run a Django development server?</h3>
+            <div class="options">
+                <label><input type="radio" name="q7" value="a"> python manage.py runserver</label>
+                <label><input type="radio" name="q7" value="b"> python manage.py startserver</label>
+                <label><input type="radio" name="q7" value="c"> django-admin runserver</label>
+                <label><input type="radio" name="q7" value="d"> python runserver.py</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>8. Which of the following is used to create a new Django app?</h3>
+            <div class="options">
+                <label><input type="radio" name="q8" value="a"> django-admin startapp</label>
+                <label><input type="radio" name="q8" value="b"> python manage.py startapp</label>
+                <label><input type="radio" name="q8" value="c"> python manage.py createapp</label>
+                <label><input type="radio" name="q8" value="d"> django-admin createapp</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>9. What is the purpose of the `migrations` folder in Django?</h3>
+            <div class="options">
+                <label><input type="radio" name="q9" value="a"> To store database migration files</label>
+                <label><input type="radio" name="q9" value="b"> To store static files</label>
+                <label><input type="radio" name="q9" value="c"> To store templates</label>
+                <label><input type="radio" name="q9" value="d"> To store middleware</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>10. Which template engine does Django use by default?</h3>
+            <div class="options">
+                <label><input type="radio" name="q10" value="a"> Jinja2</label>
+                <label><input type="radio" name="q10" value="b"> Django Template Language (DTL)</label>
+                <label><input type="radio" name="q10" value="c"> Mako</label>
+                <label><input type="radio" name="q10" value="d"> None of the above</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>11. What is the purpose of the `manage.py` file in Django?</h3>
+            <div class="options">
+                <label><input type="radio" name="q11" value="a"> To manage the database</label>
+                <label><input type="radio" name="q11" value="b"> To manage the Django project</label>
+                <label><input type="radio" name="q11" value="c"> To manage the templates</label>
+                <label><input type="radio" name="q11" value="d"> To manage the middleware</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>12. How do you create a migration in Django?</h3>
+            <div class="options">
+                <label><input type="radio" name="q12" value="a"> python manage.py makemigrations</label>
+                <label><input type="radio" name="q12" value="b"> python manage.py migrate</label>
+                <label><input type="radio" name="q12" value="c"> python manage.py create-migration</label>
+                <label><input type="radio" name="q12" value="d"> python manage.py runmigration</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>13. What is the default port for the Django development server?</h3>
+            <div class="options">
+                <label><input type="radio" name="q13" value="a"> 8000</label>
+                <label><input type="radio" name="q13" value="b"> 8080</label>
+                <label><input type="radio" name="q13" value="c"> 5000</label>
+                <label><input type="radio" name="q13" value="d"> 3000</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>14. In Django, what is the purpose of the `@login_required` decorator?</h3>
+            <div class="options">
+                <label><input type="radio" name="q14" value="a"> To restrict access to authenticated users</label>
+                <label><input type="radio" name="q14" value="b"> To log out a user</label>
+                <label><input type="radio" name="q14" value="c"> To log in a user automatically</label>
+                <label><input type="radio" name="q14" value="d"> To create a new user</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>15. Which of the following is used to define models in Django?</h3>
+            <div class="options">
+                <label><input type="radio" name="q15" value="a"> models.py</label>
+                <label><input type="radio" name="q15" value="b"> views.py</label>
+                <label><input type="radio" name="q15" value="c"> urls.py</label>
+                <label><input type="radio" name="q15" value="d"> settings.py</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>16. What does ORM stand for in Django?</h3>
+            <div class="options">
+                <label><input type="radio" name="q16" value="a"> Object Relational Mapping</label>
+                <label><input type="radio" name="q16" value="b"> Object Relational Model</label>
+                <label><input type="radio" name="q16" value="c"> Object Role Mapping</label>
+                <label><input type="radio" name="q16" value="d"> Object Resource Manager</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>17. What is the command to create a superuser in Django?</h3>
+            <div class="options">
+                <label><input type="radio" name="q17" value="a"> python manage.py createsuperuser</label>
+                <label><input type="radio" name="q17" value="b"> python manage.py makesuperuser</label>
+                <label><input type="radio" name="q17" value="c"> python manage.py superuser</label>
+                <label><input type="radio" name="q17" value="d"> python manage.py adminuser</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>18. What is the purpose of the `STATIC_URL` setting in Django?</h3>
+            <div class="options">
+                <label><input type="radio" name="q18" value="a"> To define the URL for serving static files</label>
+                <label><input type="radio" name="q18" value="b"> To define the path for templates</label>
+                <label><input type="radio" name="q18" value="c"> To define the URL for serving media files</label>
+                <label><input type="radio" name="q18" value="d"> To define the URL for serving migrations</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>19. Which of the following is used to render HTML templates in Django?</h3>
+            <div class="options">
+                <label><input type="radio" name="q19" value="a"> render()</label>
+                <label><input type="radio" name="q19" value="b"> HttpResponse()</label>
+                <label><input type="radio" name="q19" value="c"> redirect()</label>
+                <label><input type="radio" name="q19" value="d"> JsonResponse()</label>
+            </div>
+        </div>
+        <div class="question">
+            <h3>20. Which command is used to apply migrations in Django?</h3>
+            <div class="options">
+                <label><input type="radio" name="q20" value="a"> python manage.py makemigrations</label>
+                <label><input type="radio" name="q20" value="b"> python manage.py migrate</label>
+                <label><input type="radio" name="q20" value="c"> python manage.py runserver</label>
+                <label><input type="radio" name="q20" value="d"> python manage.py startapp</label>
+            </div>
+        </div>
+        <button type="button" onclick="submitQuiz()">Submit</button>
+    </form>
+    <div id="result" class="result" style="display: none;"></div>
+    <script>
+        const correctAnswers = {
+            q1: 'a',
+            q2: 'a',
+            q3: 'a',
+            q4: 'd',
+            q5: 'c',
+            q6: 'a',
+            q7: 'a',
+            q8: 'b',
+            q9: 'a',
+            q10: 'b',
+            q11: 'b',
+            q12: 'a',
+            q13: 'a',
+            q14: 'a',
+            q15: 'a',
+            q16: 'a',
+            q17: 'a',
+            q18: 'a',
+            q19: 'a',
+            q20: 'b'
+        };
+
+        function submitQuiz() {
+            const form = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('result');
+            let correct = 0;
+            let incorrect = 0;
+            let feedback = '';
+
+            for (const [key, value] of Object.entries(correctAnswers)) {
+                const selected = form.querySelector(`input[name="${key}"]:checked`);
+                if (selected) {
+                    if (selected.value === value) {
+                        correct++;
+                    } else {
+                        incorrect++;
+                        feedback += `<p>Question ${key.slice(1)}: Correct answer is ${value.toUpperCase()}</p>`;
+                    }
+                } else {
+                    incorrect++;
+                    feedback += `<p>Question ${key.slice(1)}: You did not answer. Correct answer is ${value.toUpperCase()}</p>`;
+                }
+            }
+
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `<h3>Results:</h3>
+                <p>Correct: ${correct}</p>
+                <p>Incorrect: ${incorrect}</p>
+                ${feedback}`;
+        }
+    </script>
+</body>
+</html>
